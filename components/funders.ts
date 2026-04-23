@@ -62,6 +62,13 @@ export const FUNDERS: Record<string, Funder> = {
     alt: "Fund for New York City Public Schools logo",
     url: "https://www.fundfornycps.org",
   },
+  edtx: {
+    key: "edtx",
+    name: "Educate Texas",
+    logo: "/funders/edtx.png",
+    alt: "Educate Texas logo",
+    url: "https://edtx.org",
+  },
 };
 
 export function getFunder(key: string): Funder | undefined {

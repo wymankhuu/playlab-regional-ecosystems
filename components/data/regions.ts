@@ -296,7 +296,7 @@ export const regions: Region[] = [
     id: "tx",
     name: "Texas",
     status: "full",
-    funders: ["kle-foundation", "rainwater-foundation"],
+    funders: ["kle-foundation", "rainwater-foundation", "edtx"],
     systems: 15,
     blurb:
       "Texas regional ecosystem co-funded by the KLE Foundation and the Rainwater Charitable Foundation. Launched with a local intermediary and Playlab support to build district AI capacity. One of the full-ecosystem regions (alongside DC/MD/VA) now engaging 50+ school systems with measurable growth in district AI capacity.",
