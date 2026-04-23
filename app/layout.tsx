@@ -17,6 +17,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+  ),
   title: "Regional AI Innovation Ecosystems — Playlab",
   description:
     "Building infrastructure for education systems to cultivate AI agency, impact, and innovation. A funder partnership opportunity from Playlab.",
@@ -25,6 +28,13 @@ export const metadata: Metadata = {
     description:
       "Networks of schools, districts, and local partners collaborating to build AI capacity together. Six modular components, $50K to $5M+ investment paths.",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Regional AI Innovation Ecosystems — Playlab",
+    description:
+      "Networks of schools, districts, and local partners collaborating to build AI capacity together. Six modular components, $50K to $5M+ investment paths.",
+    images: ["/opengraph-image"],
   },
 };
 
