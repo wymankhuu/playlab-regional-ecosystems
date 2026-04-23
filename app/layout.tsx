@@ -9,14 +9,14 @@ import "./globals.css";
 const livvic = Livvic({
   variable: "--font-livvic",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "900"],
+  weight: ["600", "700"],
   display: "swap",
 });
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
   display: "swap",
 });
 
