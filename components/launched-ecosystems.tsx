@@ -845,7 +845,10 @@ export function LaunchedEcosystems() {
                 key={region.id}
                 className="group rounded-2xl border border-dark-green/10 bg-cream open:border-dark-green/20 open:md:col-span-2 open:lg:col-span-3"
               >
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden">
+                <summary
+                  aria-label={`Toggle details for ${region.name}`}
+                  className="flex cursor-pointer list-none items-start justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden"
+                >
                   <div className="flex flex-col gap-2">
                     <span
                       className={`inline-flex w-fit items-center rounded-full px-2.5 py-0.5 font-sans text-[10px] font-semibold uppercase tracking-wider ${status.pill}`}
