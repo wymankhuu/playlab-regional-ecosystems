@@ -27,6 +27,7 @@ const stats = [
 export function Opportunity() {
   return (
     <Section
+      id="opportunity"
       tone="cream"
       eyebrow="The Opportunity"
       title="Build local AI agency. Unlock long-term innovation in learning."

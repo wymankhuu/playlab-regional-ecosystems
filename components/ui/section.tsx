@@ -42,7 +42,7 @@ export function Section({
   const headerMaxW = align === "center" ? "max-w-3xl mx-auto" : "max-w-3xl";
 
   return (
-    <section id={id} className={`${sectionTone[tone]} py-16 sm:py-20 lg:py-28`}>
+    <section id={id} className={`${sectionTone[tone]} py-16 sm:py-20 lg:py-28 ${id ? "scroll-mt-20" : ""}`}>
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-12">
         {(eyebrow || title || description || showColorBar) && (
           <div className={`flex flex-col gap-5 ${alignClass} ${headerMaxW} mb-12 sm:mb-16`}>

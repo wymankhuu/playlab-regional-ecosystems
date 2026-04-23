@@ -35,8 +35,12 @@ function buildSvg({
     .map((s) => `.${s.toLowerCase()}`)
     .join(",");
 
-  const allInteractive = [...highlightedStates, ...emergingStates]
-    .map((s) => `.${s.toLowerCase()}`)
+  const interactiveCodes = [...highlightedStates, ...emergingStates].map((s) =>
+    s.toLowerCase(),
+  );
+  const allInteractive = interactiveCodes.map((s) => `.${s}`).join(",");
+  const allInteractiveHover = interactiveCodes
+    .map((s) => `.${s}:hover`)
     .join(",");
 
   const injectedCss = `
@@ -46,7 +50,7 @@ function buildSvg({
 ${fullSelectors ? `${fullSelectors} { fill: var(--color-cyan); }` : ""}
 ${emergingSelectors ? `${emergingSelectors} { fill: var(--color-yellow); }` : ""}
 ${allInteractive ? `${allInteractive} { cursor: pointer; transition: filter 150ms ease; }` : ""}
-${allInteractive ? `${allInteractive}:hover { filter: brightness(1.1); }` : ""}
+${allInteractiveHover ? `${allInteractiveHover} { filter: brightness(1.1); }` : ""}
 `.trim();
 
   const a11y = `<title>${escapeXml(title)}</title><desc>${escapeXml(description)}</desc>`;

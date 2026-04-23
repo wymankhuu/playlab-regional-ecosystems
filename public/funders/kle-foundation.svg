@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 64" role="img" aria-label="KLE Foundation">
+  <style>
+    .kle-mark { font: 700 28px "Helvetica Neue", Arial, sans-serif; fill: #1c3a3a; letter-spacing: 0.08em; }
+    .kle-sub { font: 500 11px "Helvetica Neue", Arial, sans-serif; fill: #1c3a3a; letter-spacing: 0.22em; }
+  </style>
+  <text x="8" y="32" class="kle-mark">KLE</text>
+  <text x="8" y="52" class="kle-sub">FOUNDATION</text>
+  <line x1="90" y1="14" x2="90" y2="52" stroke="#1c3a3a" stroke-width="1.5" />
+</svg>

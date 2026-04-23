@@ -22,6 +22,7 @@ const reasons = [
 export function WhyPlaylab() {
   return (
     <Section
+      id="why-playlab"
       tone="playlab-blue"
       eyebrow="Why Playlab"
       title="Built for schools. Shared with the field."

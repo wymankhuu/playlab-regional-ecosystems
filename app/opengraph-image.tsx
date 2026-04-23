@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "Regional AI Innovation Ecosystems — Playlab";
+export const alt = "Regional AI Innovation Ecosystems: Playlab";
 
 export const size = {
   width: 1200,

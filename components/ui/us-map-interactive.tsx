@@ -2,10 +2,12 @@
 
 import { useRef, useState } from "react";
 
+import type { Funder } from "@/components/funders";
+
 export type MapRegionCard = {
   name: string;
   status: "full" | "emerging";
-  funders: string[];
+  funders: Funder[];
   systems: number;
 };
 
@@ -69,7 +71,7 @@ export function UsMapInteractive({ svg, regions, title }: Props) {
       <div dangerouslySetInnerHTML={{ __html: svg }} />
       {activeRegion && pill && (
         <div
-          className="pointer-events-none absolute z-10 min-w-[180px] max-w-[260px] -translate-x-1/2 -translate-y-full rounded-2xl border border-dark-green/15 bg-cream px-4 py-3 shadow-lg"
+          className="pointer-events-none absolute z-10 min-w-[200px] max-w-[280px] -translate-x-1/2 -translate-y-full rounded-2xl border border-dark-green/15 bg-cream px-4 py-3 shadow-lg"
           style={{
             left: `${cursor.x}px`,
             top: `${cursor.y - 12}px`,
@@ -84,12 +86,25 @@ export function UsMapInteractive({ svg, regions, title }: Props) {
             {activeRegion.name}
           </p>
           {activeRegion.funders.length > 0 && (
-            <p className="mt-1 font-sans text-xs text-playlab-blue/80">
-              Supported by {activeRegion.funders.join(", ")}
-            </p>
+            <div className="mt-2">
+              <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-dark-green/70">
+                Supported by
+              </p>
+              <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                {activeRegion.funders.map((f) => (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    key={f.key}
+                    src={f.logo}
+                    alt={f.alt}
+                    className="h-5 w-auto object-contain"
+                  />
+                ))}
+              </div>
+            </div>
           )}
           {activeRegion.systems > 0 && (
-            <p className="mt-1 font-sans text-xs font-semibold text-playlab-blue/80">
+            <p className="mt-2 font-sans text-xs font-semibold text-playlab-blue/80">
               {activeRegion.systems} school systems
             </p>
           )}

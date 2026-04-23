@@ -1,10 +1,11 @@
 import Image from "next/image";
 
-const LINKS: ReadonlyArray<{ label: string; href: string }> = [
-  { label: "About", href: "https://www.playlab.ai/about" },
-  { label: "Partnerships", href: "https://www.playlab.ai/partnerships" },
-  { label: "AI Lab Schools", href: "https://www.playlab.ai/ai-lab-schools" },
-  { label: "Blog", href: "https://www.playlab.ai/blog" },
+const SECTION_LINKS: ReadonlyArray<{ label: string; href: string }> = [
+  { label: "Opportunity", href: "#opportunity" },
+  { label: "Regions", href: "#launched" },
+  { label: "Components", href: "#components" },
+  { label: "Why Playlab", href: "#why-playlab" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export function TopNav() {
@@ -22,19 +23,19 @@ export function TopNav() {
           <Image
             src="/playlab-logo.png"
             alt="Playlab"
-            width={120}
-            height={31}
+            width={167}
+            height={57}
             className="h-7 w-auto sm:h-8"
             priority
           />
         </a>
 
-        <ul className="hidden items-center gap-6 sm:flex lg:gap-8">
-          {LINKS.map((link) => (
+        <ul className="hidden items-center gap-5 md:flex lg:gap-7">
+          {SECTION_LINKS.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="font-heading text-base font-semibold text-cream transition-opacity hover:opacity-75"
+                className="font-heading text-sm font-semibold text-cream transition-opacity hover:opacity-75 lg:text-base"
               >
                 {link.label}
               </a>

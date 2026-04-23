@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ColorBar } from "./ui/color-bar";
 
 const PARTNERSHIP_REQUEST_URL =
@@ -7,7 +6,7 @@ const CONTACT_EMAIL = "partnerships@playlab.ai";
 
 export function FinalCTA() {
   return (
-    <section className="bg-sage py-20 sm:py-28">
+    <section id="contact" className="scroll-mt-20 bg-sage py-20 sm:py-28">
       <div className="mx-auto w-full max-w-5xl px-4 text-center sm:px-8">
         <div className="flex flex-col items-center gap-6">
           <ColorBar />
@@ -34,18 +33,6 @@ export function FinalCTA() {
             >
               Submit a partnership request
             </a>
-          </div>
-          <div className="mt-12 flex items-center gap-3 opacity-90">
-            <p className="font-heading text-sm font-bold tracking-wide text-dark-green">
-              Powered by
-            </p>
-            <Image
-              src="/playlab-logo.png"
-              alt="Playlab"
-              width={120}
-              height={31}
-              className="h-[26px] w-auto"
-            />
           </div>
         </div>
       </div>
