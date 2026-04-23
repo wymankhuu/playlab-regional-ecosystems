@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Livvic, Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { ScrollToTop } from "@/components/scroll-to-top";
-import { TopNav } from "@/components/top-nav";
 import "./globals.css";
 
 const livvic = Livvic({
@@ -50,9 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${livvic.variable} ${montserrat.variable}`}>
       <body>
-        <TopNav />
         {children}
-        <ScrollToTop />
         <Analytics />
         <SpeedInsights />
       </body>

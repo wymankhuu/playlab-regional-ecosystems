@@ -36,3 +36,18 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0.4in;
+  }
+
+  html,
+  body {
+    background: #fff;
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

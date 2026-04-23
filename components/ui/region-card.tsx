@@ -1,17 +1,7 @@
 import { FUNDERS, type Funder } from "@/components/funders";
 import { FunderBadge } from "@/components/ui/funder-badge";
+import { StatusPill } from "@/components/ui/status-pill";
 import type { Region } from "@/components/data/regions";
-
-const statusStyles: Record<Region["status"], { pill: string; label: string }> = {
-  full: {
-    pill: "bg-cyan text-playlab-blue",
-    label: "Full ecosystem",
-  },
-  emerging: {
-    pill: "bg-yellow text-dark-green",
-    label: "Emerging ecosystem",
-  },
-};
 
 function resolveFunders(keys: string[]): Funder[] {
   return keys
@@ -20,7 +10,6 @@ function resolveFunders(keys: string[]): Funder[] {
 }
 
 export function RegionCard({ region }: { region: Region }) {
-  const status = statusStyles[region.status];
   return (
     <details
       id={`region-${region.id}`}
@@ -31,11 +20,7 @@ export function RegionCard({ region }: { region: Region }) {
         className="flex cursor-pointer list-none items-start justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden"
       >
         <div className="flex flex-col gap-2">
-          <span
-            className={`inline-flex w-fit items-center rounded-full px-2.5 py-0.5 font-sans text-[10px] font-semibold uppercase tracking-wider ${status.pill}`}
-          >
-            {status.label}
-          </span>
+          <StatusPill status={region.status} />
           <h4 className="font-heading text-xl font-bold leading-tight text-dark-green sm:text-2xl">
             {region.name}
           </h4>
@@ -169,6 +154,40 @@ export function RegionCard({ region }: { region: Region }) {
             </ul>
           </>
         )}
+        <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-dark-green/10 pt-4">
+          <a
+            href={`/regions/${region.id}/onepager`}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 font-sans text-sm font-semibold text-link underline-offset-2 hover:text-link-dark hover:underline"
+          >
+            <svg
+              aria-hidden
+              viewBox="0 0 20 20"
+              fill="none"
+              className="h-4 w-4"
+            >
+              <path
+                d="M2 10s3-6 8-6 8 6 8 6-3 6-8 6-8-6-8-6z"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <circle
+                cx="10"
+                cy="10"
+                r="2.5"
+                stroke="currentColor"
+                strokeWidth="1.75"
+              />
+            </svg>
+            View one-pager
+          </a>
+          <span className="font-sans text-xs text-playlab-blue/60">
+            Print to PDF to share
+          </span>
+        </div>
       </div>
     </details>
   );

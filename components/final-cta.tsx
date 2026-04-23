@@ -1,8 +1,5 @@
+import { contactMailto, PARTNERSHIP_REQUEST_URL } from "./cta";
 import { ColorBar } from "./ui/color-bar";
-
-const PARTNERSHIP_REQUEST_URL =
-  "https://u694o.share.hsforms.com/2WT-4aa2lTtW5aSd12wymYg";
-const CONTACT_EMAIL = "partnerships@playlab.ai";
 
 export function FinalCTA() {
   return (
@@ -20,7 +17,7 @@ export function FinalCTA() {
           </p>
           <div className="mt-4 flex flex-col flex-wrap items-stretch justify-center gap-3 sm:flex-row sm:items-center">
             <a
-              href={`mailto:${CONTACT_EMAIL}?subject=Regional%20AI%20Innovation%20Ecosystem%20Partnership`}
+              href={contactMailto()}
               className="inline-flex items-center justify-center rounded-full bg-dark-green px-8 py-3 font-sans text-base font-semibold text-cream transition-opacity hover:opacity-90"
             >
               Contact Us

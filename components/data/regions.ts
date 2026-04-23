@@ -39,11 +39,27 @@ export const regions: Region[] = [
     ],
     districts: [
       {
+        name: "Nashville Public Schools",
+        students: "80,000",
+        community:
+          "Large urban district; highly diverse and multilingual population with 100+ languages spoken; majority of schools Title I eligible",
+        motivation:
+          "Already piloting AI use cases in advising, scheduling, and data analysis and wants to scale responsible AI innovation across the system.",
+      },
+      {
         name: "Sumner County Schools",
         students: "30,000",
         community: "Rural/suburban district; ~60% free/reduced lunch",
         motivation:
           "Interested in preparing educators and students for the future through innovative AI integration and building AI capacity across the district.",
+      },
+      {
+        name: "Kingsport City Schools",
+        students: "7,600",
+        community:
+          "Small urban district; ~66.7% poverty rate; 250+ ESL students speaking 24+ languages",
+        motivation:
+          "Already providing AI tools and educator training and wants to deepen leadership capacity and expand meaningful AI implementation.",
       },
       {
         name: "Oak Ridge Schools",
@@ -54,36 +70,12 @@ export const regions: Region[] = [
           "Has begun targeted AI professional development and wants to expand teacher capacity to use AI ethically and effectively in teaching and learning.",
       },
       {
-        name: "STEM Preparatory Academy",
-        students: "1,000",
-        community:
-          "Urban Title I charter network; 29% English learners; 90%+ speak a second language at home; students from ~30 home countries",
-        motivation:
-          "Sees AI as a powerful way to strengthen STEM learning and computational thinking, particularly for historically underrepresented students.",
-      },
-      {
         name: "Valor Collegiate Academies",
         students: "1,950",
         community:
           "Diverse Nashville charter network; 27% Hispanic, 23% White, 19% Black, 16% MENA; 64% free/reduced lunch; 12% special education",
         motivation:
           "Has taken a “slow to go fast” approach and is now ready to launch an organization-wide AI vision, policy framework, and literacy plan.",
-      },
-      {
-        name: "Nashville Public Schools",
-        students: "80,000",
-        community:
-          "Large urban district; highly diverse and multilingual population with 100+ languages spoken; majority of schools Title I eligible",
-        motivation:
-          "Already piloting AI use cases in advising, scheduling, and data analysis and wants to scale responsible AI innovation across the system.",
-      },
-      {
-        name: "University Schools (University of Memphis)",
-        students: "1,166",
-        community:
-          "Urban district connected to a university lab school system; diverse student population",
-        motivation:
-          "Seeks to move from informal experimentation with AI tools to a research-informed districtwide AI strategy aligned with its innovation mission.",
       },
       {
         name: "Memphis School of Excellence",
@@ -102,12 +94,20 @@ export const regions: Region[] = [
           "Interested in helping teachers understand AI and preparing students to use AI responsibly while improving classroom instruction.",
       },
       {
-        name: "Kingsport City Schools",
-        students: "7,600",
+        name: "University Schools (University of Memphis)",
+        students: "1,166",
         community:
-          "Small urban district; ~66.7% poverty rate; 250+ ESL students speaking 24+ languages",
+          "Urban district connected to a university lab school system; diverse student population",
         motivation:
-          "Already providing AI tools and educator training and wants to deepen leadership capacity and expand meaningful AI implementation.",
+          "Seeks to move from informal experimentation with AI tools to a research-informed districtwide AI strategy aligned with its innovation mission.",
+      },
+      {
+        name: "STEM Preparatory Academy",
+        students: "1,000",
+        community:
+          "Urban Title I charter network; 29% English learners; 90%+ speak a second language at home; students from ~30 home countries",
+        motivation:
+          "Sees AI as a powerful way to strengthen STEM learning and computational thinking, particularly for historically underrepresented students.",
       },
     ],
   },
@@ -132,35 +132,12 @@ export const regions: Region[] = [
     ],
     districts: [
       {
-        name: "Basin School District #72",
-        students: "269",
-        community:
-          "Rural district; 48% free/reduced lunch; about 45 minutes from Boise",
-        motivation:
-          "Already using AI for family communication and reporting, but wants to expand use across teaching, learning, and operations. As a very small district where staff wear many hats, they see AI as a way to work smarter and improve school systems.",
-      },
-      {
         name: "Boise Independent School District 1",
         students: "22,000",
         community:
           "Large district serving a wide area; 100+ languages spoken; under 50% free/reduced lunch",
         motivation:
           "Wants safe, meaningful AI opportunities for students and teachers and sees the project as a way to keep pace with rapid changes in AI and robotics despite budget constraints.",
-      },
-      {
-        name: "Bliss School District #234",
-        students: "115",
-        community: "Rural, Title I schoolwide district; 72% free/reduced lunch",
-        motivation:
-          "Leadership feels urgency to prepare students for a changing world and has already started redesigning courses and teacher training around AI. Wants support to move forward thoughtfully and responsibly.",
-      },
-      {
-        name: "Horseshoe Bend School District #73",
-        students: "170",
-        community:
-          "Small rural district; 55% free/reduced lunch; elementary is schoolwide Title I",
-        motivation:
-          "Wants to prepare students for a rapidly changing future and sees AI as a tool to enhance creativity, thinking, and problem-solving while keeping use ethical and safe.",
       },
       {
         name: "Middleton School District #134",
@@ -171,14 +148,6 @@ export const regions: Region[] = [
           "Wants to move from uneven experimentation to a coherent districtwide AI strategy focused on literacy, ethics, privacy, and sustainable systems.",
       },
       {
-        name: "Wilder School District",
-        students: "620",
-        community:
-          "Rural, high-need district; 55.1% Hispanic/Latino; 19% English Learners; 71% low-income; 19% homeless; 3% migrant; 11% special education",
-        motivation:
-          "Sees itself as a strong rural pilot site that can quickly implement and demonstrate how AI can help close opportunity gaps and empower educators to design student-centered AI tools.",
-      },
-      {
         name: "American Falls School District",
         students: "1,485",
         community:
@@ -187,12 +156,43 @@ export const regions: Region[] = [
           "Already investing in AI-related professional learning and wants to build long-term capacity so teachers can use AI to support instruction, student thinking, and career-relevant digital skills.",
       },
       {
+        name: "Wilder School District",
+        students: "620",
+        community:
+          "Rural, high-need district; 55.1% Hispanic/Latino; 19% English Learners; 71% low-income; 19% homeless; 3% migrant; 11% special education",
+        motivation:
+          "Sees itself as a strong rural pilot site that can quickly implement and demonstrate how AI can help close opportunity gaps and empower educators to design student-centered AI tools.",
+      },
+      {
+        name: "Basin School District #72",
+        students: "269",
+        community:
+          "Rural district; 48% free/reduced lunch; about 45 minutes from Boise",
+        motivation:
+          "Already using AI for family communication and reporting, but wants to expand use across teaching, learning, and operations. As a very small district where staff wear many hats, they see AI as a way to work smarter and improve school systems.",
+      },
+      {
         name: "Garden Valley School District",
         students: "221",
         community:
           "Rural Idaho district serving a small mountain community",
         motivation:
           "Interested in exploring how AI can expand opportunities for students in geographically isolated communities and support educators with limited resources.",
+      },
+      {
+        name: "Horseshoe Bend School District #73",
+        students: "170",
+        community:
+          "Small rural district; 55% free/reduced lunch; elementary is schoolwide Title I",
+        motivation:
+          "Wants to prepare students for a rapidly changing future and sees AI as a tool to enhance creativity, thinking, and problem-solving while keeping use ethical and safe.",
+      },
+      {
+        name: "Bliss School District #234",
+        students: "115",
+        community: "Rural, Title I schoolwide district; 72% free/reduced lunch",
+        motivation:
+          "Leadership feels urgency to prepare students for a changing world and has already started redesigning courses and teacher training around AI. Wants support to move forward thoughtfully and responsibly.",
       },
     ],
   },
@@ -222,52 +222,6 @@ export const regions: Region[] = [
     ],
     districts: [
       {
-        name: "Northwest Indiana Lighthouse Charter Schools",
-        students: "1,700",
-        community:
-          "Title I charter network; 77% African American, 18% Hispanic",
-        motivation:
-          "Wants to help students and educators understand how AI can transform learning and support a broader reimagining of schooling.",
-      },
-      {
-        name: "Christel House Indianapolis",
-        students: "2,600",
-        community:
-          "Urban network; 80%+ free/reduced lunch; 56% English learners",
-        motivation:
-          "Has formed an internal AI committee and wants to build educator expertise and scale AI learning across its schools.",
-      },
-      {
-        name: "Lake Central School Corporation",
-        students: "8,743",
-        community:
-          "Suburban district; 25.3% free/reduced lunch; 37% students of color",
-        motivation:
-          "Focused on helping educators move beyond fear of AI and understand how it can improve instruction and student outcomes.",
-      },
-      {
-        name: "Randolph Central School Corporation",
-        students: "1,325",
-        community: "Rural district; elementary poverty rates 40–55%",
-        motivation:
-          "Sees AI as a potential equalizer for rural students by expanding access to personalized learning and advanced opportunities.",
-      },
-      {
-        name: "Valparaiso Community Schools",
-        students: "6,300",
-        community:
-          "Suburban district; 30% free/reduced lunch; 4 Title I elementary schools",
-        motivation:
-          "Interested in using AI to promote creativity, deeper learning, and postsecondary readiness.",
-      },
-      {
-        name: "Madison-Grant United School Corporation",
-        students: "955",
-        community: "Rural Title I district; ~57% free/reduced lunch",
-        motivation:
-          "Wants to shift from reactive responses to AI toward a proactive strategy supported by professional learning and clear policies.",
-      },
-      {
         name: "M.S.D. of Wayne Township",
         students: "15,000",
         community:
@@ -282,6 +236,52 @@ export const regions: Region[] = [
           "25% economically disadvantaged; large special education and ENL populations",
         motivation:
           "Wants to build educator capacity and use AI to support differentiated instruction and personalized learning.",
+      },
+      {
+        name: "Lake Central School Corporation",
+        students: "8,743",
+        community:
+          "Suburban district; 25.3% free/reduced lunch; 37% students of color",
+        motivation:
+          "Focused on helping educators move beyond fear of AI and understand how it can improve instruction and student outcomes.",
+      },
+      {
+        name: "Valparaiso Community Schools",
+        students: "6,300",
+        community:
+          "Suburban district; 30% free/reduced lunch; 4 Title I elementary schools",
+        motivation:
+          "Interested in using AI to promote creativity, deeper learning, and postsecondary readiness.",
+      },
+      {
+        name: "Christel House Indianapolis",
+        students: "2,600",
+        community:
+          "Urban network; 80%+ free/reduced lunch; 56% English learners",
+        motivation:
+          "Has formed an internal AI committee and wants to build educator expertise and scale AI learning across its schools.",
+      },
+      {
+        name: "Northwest Indiana Lighthouse Charter Schools",
+        students: "1,700",
+        community:
+          "Title I charter network; 77% African American, 18% Hispanic",
+        motivation:
+          "Wants to help students and educators understand how AI can transform learning and support a broader reimagining of schooling.",
+      },
+      {
+        name: "Randolph Central School Corporation",
+        students: "1,325",
+        community: "Rural district; elementary poverty rates 40–55%",
+        motivation:
+          "Sees AI as a potential equalizer for rural students by expanding access to personalized learning and advanced opportunities.",
+      },
+      {
+        name: "Madison-Grant United School Corporation",
+        students: "955",
+        community: "Rural Title I district; ~57% free/reduced lunch",
+        motivation:
+          "Wants to shift from reactive responses to AI toward a proactive strategy supported by professional learning and clear policies.",
       },
       {
         name: "Jac-Cen-Del Community School Corporation",
@@ -303,15 +303,15 @@ export const regions: Region[] = [
     orgs: [],
     stats: [
       { label: "Partner school systems", value: "15" },
-      { label: "Students reached", value: "~163,000" },
+      { label: "Students reached", value: "~173,000" },
     ],
     districtsHeading: "Partner school systems",
     districts: [
       {
         name: "IDEA Public Schools",
-        students: "80,000",
+        students: "87,000",
         community:
-          "Weslaco-headquartered K–12 public charter network. 143 schools across multiple states, college-for-all mission.",
+          "Weslaco-headquartered K–12 public charter network. 145 schools across Texas, Louisiana, Florida, and Ohio with a college-for-all mission.",
         motivation: "",
       },
       {
@@ -323,43 +323,50 @@ export const regions: Region[] = [
       },
       {
         name: "Pflugerville ISD",
-        students: "25,000",
+        students: "25,297",
         community:
-          "Public school district northeast of Austin. 35 schools PK–12.",
+          "Public school district northeast of Austin. 35 schools PK–12; 75+ native languages spoken.",
         motivation: "",
       },
       {
         name: "San Marcos CISD",
-        students: "8,311",
+        students: "8,222",
         community:
           "Consolidated ISD in the Texas Hill Country. Known for dual-credit partnerships and college/career readiness.",
         motivation: "",
       },
       {
         name: "Cedar Hill ISD",
-        students: "7,120",
-        community: "Independent school district near Dallas.",
+        students: "6,336",
+        community: "Suburban independent school district near Dallas. 12 schools.",
+        motivation: "",
+      },
+      {
+        name: "Compass Rose Public Schools",
+        students: "3,600",
+        community:
+          "San Antonio-based charter network. 8 campuses across greater San Antonio.",
         motivation: "",
       },
       {
         name: "Austin Achieve Public Schools",
-        students: "2,312",
+        students: "2,647",
         community:
           "Tuition-free charter in East Austin focused on top-university readiness.",
         motivation: "",
       },
       {
-        name: "NYOS Charter School",
-        students: "1,763",
+        name: "Wayside Schools",
+        students: "2,000",
         community:
-          "Not Your Ordinary Charter School in Austin. Part of the CTX cohort.",
+          "Austin-based CMO. Four South Austin campuses serving PreK3–12 in a bilingual, culturally responsive environment.",
         motivation: "",
       },
       {
-        name: "Wayside Schools",
-        students: "1,759",
+        name: "NYOS Charter School",
+        students: "1,727",
         community:
-          "Austin-based CMO. 5 campuses serving PreK3–5 in a bilingual, culturally responsive environment.",
+          "Not Your Ordinary Charter School in Austin, PreK–12. Part of the CTX cohort.",
         motivation: "",
       },
       {
@@ -370,44 +377,38 @@ export const regions: Region[] = [
         motivation: "",
       },
       {
-        name: "Doral Academy Texas",
-        students: "370",
+        name: "Royal Public Schools",
+        students: "469",
         community:
-          "Tuition-free STEM-focused charter in Buda (near Austin). PK4–9, expanding through 12.",
+          "San Antonio K–10 charter (expanding through 12). STREAMS 360 program with STEM and SEL emphasis.",
         motivation: "",
       },
       {
-        name: "Royal Public Schools",
-        students: "345",
+        name: "Doral Academy Texas",
+        students: "392",
         community:
-          "San Antonio K–8 charter. STREAMS 360 program with STEM and SEL emphasis.",
+          "Tuition-free STEM-focused charter in Buda (near Austin). PK4–9 today, adding 9th grade in 2025–26 and expanding through 12.",
         motivation: "",
       },
       {
         name: "Treetops School International",
-        students: "323",
+        students: "358",
         community:
-          "International school in Euless offering a global academic experience.",
+          "International K–12 charter in Euless; consolidating to K–6 in 2025–26 as middle and high school grades sunset.",
         motivation: "",
       },
       {
         name: "Celebrate Dyslexia School",
-        students: "100",
+        students: "112",
         community:
-          "San Antonio charter. Specialized, multisensory K–4 education for students with dyslexia.",
+          "San Antonio charter. Opened in 2024 serving K–2, expanding through 8th grade; specialized multisensory education for students with dyslexia.",
         motivation: "",
       },
       {
         name: "Texas Girls School",
         students: "100",
         community:
-          "Austin all-girls public charter (grades 6–12). First-year school with STEM-focused curriculum.",
-        motivation: "",
-      },
-      {
-        name: "Compass Rose Public Schools",
-        students: "72",
-        community: "San Antonio-based charter group led by Mera.",
+          "Northwest Austin all-girls public charter (grades 6–8 today, expanding through 12). First-year school with STEM-focused curriculum.",
         motivation: "",
       },
     ],
@@ -514,7 +515,7 @@ export const regions: Region[] = [
       "fund-for-nycps",
       "gotham-gives",
     ],
-    systems: 0,
+    systems: 5,
     blurb:
       "NYCPS + Playlab reaches NYC community school districts 14, 29, 15, 7, and CIOB. The foundation is a CIOB partnership with nine Lab Schools across all five boroughs, 60+ AI Innovation Fellows, a Summer 2025 AI Design Institute, and 325+ students reached through Cornell Tech, Girls AI Buildathon, and Spring 2026 events. The 2026-27 plan scales citywide with an NYC AI Summer Institute for 500+ leaders, a Citywide Student AI Challenge at Day of AI in May 2027, 60 Fellows across NYCPS priority tracks (NYC Reads, NYC Solves, Future Ready, Portrait of a Graduate), up to 8 AI Innovation Schools, up to 5 AI Innovation Districts, and 2 to 4 NYCPS AI Application Collections.",
     stats: [
@@ -528,20 +529,20 @@ export const regions: Region[] = [
     districtsHeading: "CIOB Lab Schools",
     districts: [
       {
-        name: "Brooklyn Collaborative Studies",
-        students: "645",
-        community:
-          "Brooklyn · grades 6–12 · student agency through metacognition and differentiation tools",
-        motivation:
-          "Apps built by teacher fellows include SMART Goal Coach, Math Thought Partner, Differentiation Toolkit, and BIP Bot. Completed a student AI literacy focus group in December 2025.",
-      },
-      {
         name: "East Side Community School",
         students: "695",
         community:
           "Manhattan · grades 6–12 · seamless AI for agency and metacognition",
         motivation:
           "Fellow-built apps include a Science PBAT Presentation Coach and a STEM Career Explorer.",
+      },
+      {
+        name: "Brooklyn Collaborative Studies",
+        students: "645",
+        community:
+          "Brooklyn · grades 6–12 · student agency through metacognition and differentiation tools",
+        motivation:
+          "Apps built by teacher fellows include SMART Goal Coach, Math Thought Partner, Differentiation Toolkit, and BIP Bot. Completed a student AI literacy focus group in December 2025.",
       },
       {
         name: "University Heights Secondary School",
@@ -568,20 +569,20 @@ export const regions: Region[] = [
           "Home of the high-performing EchoSpace app for rubric-aligned feedback to students and families.",
       },
       {
-        name: "Bronx Lab School",
-        students: "214",
-        community:
-          "Bronx · grades 9–12 · robust AI policy paired with agency-building experiences",
-        motivation:
-          "Fellow-built apps include STEM Activity Creator, Math Knowledge Gap Assessment, Near-Peer Feedback, and Emotional Regulation Toolbox.",
-      },
-      {
         name: "A School Without Walls",
         students: "215",
         community:
           "Manhattan · NYC's first hybrid public school (2 days in-person + 3 days online) · passion-project learning",
         motivation:
           "AI tools help students explore interests through passion projects. A Student AI Leadership Council has been established. Key app: City Civics.",
+      },
+      {
+        name: "Bronx Lab School",
+        students: "214",
+        community:
+          "Bronx · grades 9–12 · robust AI policy paired with agency-building experiences",
+        motivation:
+          "Fellow-built apps include STEM Activity Creator, Math Knowledge Gap Assessment, Near-Peer Feedback, and Emotional Regulation Toolbox.",
       },
       {
         name: "Forsyth Academy",
@@ -636,7 +637,7 @@ export const regions: Region[] = [
     name: "North Carolina",
     status: "emerging",
     funders: ["leon-levine-foundation"],
-    systems: 1,
+    systems: 3,
     blurb:
       "North Carolina is an emerging Playlab ecosystem anchored by SparkNC, a statewide network of Spark Labs where high school students pursue semester-long passion projects in technology and AI. Playlab is building SparkNC a custom app to help students select passion projects across the Spark Lab network — the first of many tools Playlab expects to build for and alongside SparkNC. NC Department of Public Instruction (NC DPI) is a multi-year statewide partner, and KIPP North Carolina runs Leading Educators' IM math internalization apps on Playlab as part of its instructional coaching practice. Polly led a statewide NC Student AI Solve-A-Thon through fall 2025 and early 2026, feeding into the national Presidential AI Challenge.",
     orgs: [
