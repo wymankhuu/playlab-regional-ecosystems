@@ -27,18 +27,18 @@ export const metadata: Metadata = {
   title: "Fund a Regional AI Innovation Ecosystem | Playlab",
   description:
     "Partner with Playlab to build K-12 AI innovation in your region. Explore modular components, meet launched networks, and start the partnership conversation.",
+  applicationName: "Playlab Regional Ecosystems",
+  authors: [{ name: "Playlab Education Inc.", url: "https://www.playlab.ai" }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Fund a Regional AI Innovation Ecosystem | Playlab",
     description:
       "Partner with Playlab to build K-12 AI innovation in your region. Networks of schools, districts, and communities developing AI capacity together. Start the conversation.",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Fund a Regional AI Innovation Ecosystem | Playlab",
-    description:
-      "Partner with Playlab to build K-12 AI innovation in your region. Networks of schools, districts, and communities developing AI capacity together. Start the conversation.",
-    images: ["/opengraph-image"],
+    url: "/",
+    siteName: "Playlab Regional Ecosystems",
   },
 };
 
