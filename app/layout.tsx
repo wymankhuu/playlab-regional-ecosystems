@@ -24,20 +24,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ),
-  title: "Regional AI Innovation Ecosystems: Playlab",
+  title: "Fund a Regional AI Innovation Ecosystem | Playlab",
   description:
-    "Building infrastructure for education systems to cultivate AI agency, impact, and innovation. A funder partnership opportunity from Playlab.",
+    "Partner with Playlab to build K-12 AI innovation in your region. Explore modular components, meet launched networks, and start the partnership conversation.",
   openGraph: {
-    title: "Regional AI Innovation Ecosystems: Playlab",
+    title: "Fund a Regional AI Innovation Ecosystem | Playlab",
     description:
-      "Networks of schools, districts, and local partners collaborating to build AI capacity together. Six modular components, $50K to $5M+ investment paths.",
+      "Partner with Playlab to build K-12 AI innovation in your region. Networks of schools, districts, and communities developing AI capacity together. Start the conversation.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Regional AI Innovation Ecosystems: Playlab",
+    title: "Fund a Regional AI Innovation Ecosystem | Playlab",
     description:
-      "Networks of schools, districts, and local partners collaborating to build AI capacity together. Six modular components, $50K to $5M+ investment paths.",
+      "Partner with Playlab to build K-12 AI innovation in your region. Networks of schools, districts, and communities developing AI capacity together. Start the conversation.",
     images: ["/opengraph-image"],
   },
 };
