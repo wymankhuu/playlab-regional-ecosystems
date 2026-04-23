@@ -9,7 +9,7 @@ const LINKS: ReadonlyArray<{ label: string; href: string }> = [
 
 export function TopNav() {
   return (
-    <header className="bg-playlab-blue">
+    <header className="sticky top-0 z-40 bg-playlab-blue">
       <nav
         aria-label="Primary"
         className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-8 sm:py-5 lg:px-12"
