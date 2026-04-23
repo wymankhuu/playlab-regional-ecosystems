@@ -22,7 +22,10 @@ function resolveFunders(keys: string[]): Funder[] {
 export function RegionCard({ region }: { region: Region }) {
   const status = statusStyles[region.status];
   return (
-    <details className="group rounded-2xl border border-dark-green/10 bg-cream open:border-dark-green/20 open:md:col-span-2 open:lg:col-span-3">
+    <details
+      id={`region-${region.id}`}
+      className="group scroll-mt-24 rounded-2xl border border-dark-green/10 bg-cream open:border-dark-green/20 open:md:col-span-2 open:lg:col-span-3"
+    >
       <summary
         aria-label={`Toggle details for ${region.name}`}
         className="flex cursor-pointer list-none items-start justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden"

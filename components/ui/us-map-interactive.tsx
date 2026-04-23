@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import type { Funder } from "@/components/funders";
 
 export type MapRegionCard = {
+  id: string;
   name: string;
   status: "full" | "emerging";
   funders: Funder[];
@@ -56,6 +57,17 @@ export function UsMapInteractive({ svg, regions, title }: Props) {
     setHovered(null);
   }
 
+  function handleClick(e: React.MouseEvent<HTMLDivElement>) {
+    const code = resolveState(e.target);
+    if (!code) return;
+    const region = regions[code];
+    if (!region) return;
+    const el = document.getElementById(`region-${region.id}`);
+    if (!el) return;
+    if (el instanceof HTMLDetailsElement) el.open = true;
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
   const activeRegion = hovered ? regions[hovered] : null;
   const pill = activeRegion ? statusPill[activeRegion.status] : null;
 
@@ -67,6 +79,7 @@ export function UsMapInteractive({ svg, regions, title }: Props) {
       aria-label={title}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
+      onClick={handleClick}
     >
       <div dangerouslySetInnerHTML={{ __html: svg }} />
       {activeRegion && pill && (

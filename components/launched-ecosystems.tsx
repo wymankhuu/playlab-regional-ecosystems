@@ -21,6 +21,7 @@ const stateRegionMap: StateRegionMap = (() => {
   const map: StateRegionMap = {};
   for (const region of regions) {
     const card = {
+      id: region.id,
       name: region.name,
       status: region.status,
       funders: resolveFunders(region.funders),
