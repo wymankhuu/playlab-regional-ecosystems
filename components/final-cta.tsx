@@ -7,7 +7,7 @@ const CONTACT_EMAIL = "partnerships@playlab.ai";
 
 export function FinalCTA() {
   return (
-    <section className="bg-yellow py-20 sm:py-28">
+    <section className="bg-sage py-20 sm:py-28">
       <div className="mx-auto w-full max-w-5xl px-4 text-center sm:px-8">
         <div className="flex flex-col items-center gap-6">
           <ColorBar />
@@ -24,7 +24,7 @@ export function FinalCTA() {
               href={`mailto:${CONTACT_EMAIL}?subject=Regional%20AI%20Innovation%20Ecosystem%20Partnership`}
               className="inline-flex items-center justify-center rounded-full bg-dark-green px-8 py-3 font-sans text-base font-semibold text-cream transition-opacity hover:opacity-90"
             >
-              Email partnerships@playlab.ai
+              Contact Us
             </a>
             <a
               href={PARTNERSHIP_REQUEST_URL}

@@ -1,5 +1,6 @@
 import { Section } from "./ui/section";
 import { Card } from "./ui/card";
+import { LaunchedEcosystems } from "./launched-ecosystems";
 
 const capacities = [
   {
@@ -28,7 +29,7 @@ export function Opportunity() {
     <Section
       tone="cream"
       eyebrow="The Opportunity"
-      title="AI agency is the new literacy. We help schools build it."
+      title="Build local AI agency. Unlock long-term innovation in learning."
       description="Playlab defines AI agency as the intersection of three capacities. With Playlab, students and educators develop AI agency by building custom AI applications grounded in their values, curriculum, and local context."
       align="left"
       showColorBar
@@ -67,6 +68,10 @@ export function Opportunity() {
           Ecosystems: networks of schools, districts, and local partners that
           collaborate to build AI capacity together.
         </p>
+      </div>
+
+      <div className="mt-16 sm:mt-20">
+        <LaunchedEcosystems />
       </div>
     </Section>
   );

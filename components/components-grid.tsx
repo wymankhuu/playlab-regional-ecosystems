@@ -37,10 +37,12 @@ const components: Component[] = [
       "Creates regional alignment on AI strategy across participating systems.",
     ],
     example: {
-      name: "NYCPS Summer 2025 AI Design Institute (with CIOB)",
-      body: "Two-day convening at Relay Graduate School of Education in NYC. Roughly 100 educators from CIOB schools, Leading Educators, New Visions, ASSISTments, and other city partners built custom AI applications hands-on, attended advanced workshops on Smart Referencing, Model Selection, and Designing for Usability, and showcased tools in an AI App Fair. Post-survey results: nearly all participants reported increased AI comfort, skill, knowledge, and implementation readiness. NPS scores were overwhelmingly 10 out of 10. Day 1 ratings were 5 out of 5 across the board. The institute catalyzed ongoing partnerships and served as the launchpad for NYCPS's broader AI innovation work with Playlab.",
-      // Drop a 16:9 photo in public/components/ and uncomment below.
-      // image: { src: "/components/01-nycps-institute.jpg", alt: "Educators building AI tools at the NYCPS Summer 2025 AI Design Institute" },
+      name: "NYCPS Summer 2025 AI Design Institute (with the Consortium International Outward Bound District)",
+      body: "Two-day convening at Relay Graduate School of Education in NYC. Roughly 100 educators from Consortium International Outward Bound District schools, Leading Educators, New Visions, ASSISTments, and other city partners built custom AI applications hands-on, attended advanced workshops on Smart Referencing, Model Selection, and Designing for Usability, and showcased tools in an AI App Fair. Post-survey results: nearly all participants reported increased AI comfort, skill, knowledge, and implementation readiness. NPS scores were overwhelmingly 10 out of 10. Day 1 ratings were 5 out of 5 across the board. The institute catalyzed ongoing partnerships and served as the launchpad for NYCPS's broader AI innovation work with Playlab.",
+      image: {
+        src: "/components/01-nycps-institute.jpg",
+        alt: "Educators at the NYCPS Summer 2025 AI Design Institute during a session at Relay Graduate School of Education",
+      },
     },
     accent: "yellow",
   },
@@ -73,8 +75,10 @@ const components: Component[] = [
           url: "https://www.fcps.edu/news/seizing-moment-fcps-students-compete-designing-solutions-real-world-problems-using-ai",
         },
       ],
-      // Drop a 16:9 photo in public/components/ and uncomment below.
-      // image: { src: "/components/02-fcps-showcase.jpg", alt: "Students at the Fairfax County 'Seize the Moment' AI Challenge showcase" },
+      image: {
+        src: "/components/02-fcps-showcase.jpg",
+        alt: "A Fairfax County student (Campus Finalist) demonstrates her AI application to a judge at the 'Seize the Moment' showcase",
+      },
     },
     accent: "green",
   },
@@ -105,8 +109,10 @@ const components: Component[] = [
       links: [
         { label: "See projects and more", url: "https://ciobaifellows.com/" },
       ],
-      // Drop a 16:9 photo in public/components/ and uncomment below.
-      // image: { src: "/components/03-nycps-fellows.jpg", alt: "NYCPS AI Innovation Fellows in a working session" },
+      image: {
+        src: "/components/03-nycps-fellows.jpg",
+        alt: "NYCPS AI Innovation Fellows in a school library working session, with Playlab staff facilitating discussion",
+      },
     },
     accent: "cyan",
   },
@@ -135,8 +141,10 @@ const components: Component[] = [
     example: {
       name: "Google.org AI Ecosystems Project (in progress)",
       body: "26 schools and districts across Idaho (8), Indiana (9), and Tennessee (9) selected from 39 applicants to form regional AI innovation cohorts. Each participant builds a custom AI implementation plan, participates in regional convenings, and receives subsidized Playlab services through an 80% funding model. The cohort is 50% rural, 23% suburban, and 27% urban, serving 206,500+ students. Regional nonprofit partners (Idaho Dept. of Ed, ICCI/IASP in Indiana, SCORE in Tennessee) co-lead local coordination. Prior to launch, 1,252 educators were trained across the three states with 88 NPS and 97% reporting increased confidence teaching AI. Launch webinar: 100% positive ratings, 4.84/5 excitement to participate. The project reaches roughly 10% of Idaho's, 4.5% of Indiana's, and 13% of Tennessee's public school students. Regional convenings underway April 2026.",
-      // Drop a 16:9 photo in public/components/ and uncomment below.
-      // image: { src: "/components/04-google-ecosystems.jpg", alt: "Participants from the Google.org AI Ecosystems Project convening" },
+      image: {
+        src: "/components/04-google-ecosystems.jpg",
+        alt: "Students and educators gathered in a large glass-walled convening space with city skyline views, mingling between sessions",
+      },
     },
     accent: "light-green",
   },
@@ -169,8 +177,10 @@ const components: Component[] = [
           url: "https://www.playlab.ai/ai-lab-schools",
         },
       ],
-      // Drop a 16:9 photo in public/components/ and uncomment below.
-      // image: { src: "/components/05-ai-lab-schools.jpg", alt: "AI Lab Schools inaugural cohort working session" },
+      image: {
+        src: "/components/05-ai-lab-schools.jpg",
+        alt: "Participants gathered at long tables during an evening AI Lab Schools working session, with laptops open and materials laid out",
+      },
     },
     accent: "yellow",
   },
@@ -197,8 +207,10 @@ const components: Component[] = [
     example: {
       name: "Google.org Ecosystem Model in IN, TN, and ID; Central Texas; DC/MD/VA",
       body: "In each region, a local nonprofit convenes districts and educators across the state, with Playlab providing a dedicated regional lead. The partnership sustains participation and momentum across initiatives and ensures the ecosystem is rooted in community priorities. Central Texas and DC/MD/VA ecosystems each launched with a local intermediary and Playlab support, engaging 50+ school systems and demonstrating measurable growth in district AI capacity.",
-      // Drop a 16:9 photo in public/components/ and uncomment below.
-      // image: { src: "/components/06-regional-ecosystem.jpg", alt: "Regional ecosystem partners convening" },
+      image: {
+        src: "/components/06-regional-ecosystem.jpg",
+        alt: "A Playlab facilitator leads a regional convening session on AI pattern recognition, with educators seated at tables taking notes",
+      },
     },
     accent: "green",
   },
