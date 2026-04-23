@@ -631,4 +631,54 @@ export const regions: Region[] = [
       },
     ],
   },
+  {
+    id: "nc",
+    name: "North Carolina",
+    status: "emerging",
+    funders: ["leon-levine-foundation"],
+    systems: 1,
+    blurb:
+      "North Carolina is an emerging Playlab ecosystem anchored by SparkNC, a statewide network of Spark Labs where high school students pursue semester-long passion projects in technology and AI. Playlab is building SparkNC a custom app to help students select passion projects across the Spark Lab network — the first of many tools Playlab expects to build for and alongside SparkNC. NC Department of Public Instruction (NC DPI) is a multi-year statewide partner, and KIPP North Carolina runs Leading Educators' IM math internalization apps on Playlab as part of its instructional coaching practice. Polly led a statewide NC Student AI Solve-A-Thon through fall 2025 and early 2026, feeding into the national Presidential AI Challenge.",
+    orgs: [
+      { name: "SparkNC", url: "https://sparknc.org" },
+      {
+        name: "NC Department of Public Instruction (NC DPI)",
+        url: "https://www.dpi.nc.gov",
+      },
+      { name: "KIPP North Carolina", url: "https://www.kippnc.org" },
+      { name: "Leading Educators", url: "https://leadingeducators.org" },
+    ],
+    stats: [
+      { label: "Anchor partners", value: "3" },
+      { label: "Statewide reach", value: "NC DPI + SparkNC" },
+      { label: "Student AI challenge", value: "NC Solve-A-Thon 2025–26" },
+    ],
+    districtsHeading: "Anchor partners",
+    districts: [
+      {
+        name: "SparkNC",
+        students: "Statewide",
+        community:
+          "Statewide network of Spark Labs in rural and urban NC high schools where students pursue semester-long passion projects in technology and AI.",
+        motivation:
+          "Playlab is building a custom passion-project selector app used across the Spark Lab network, informed by an on-site visit to a Spark Lab in rural Sampson County in March 2026.",
+      },
+      {
+        name: "NC Department of Public Instruction",
+        students: "Statewide",
+        community:
+          "State education agency serving North Carolina's public school districts and charter networks.",
+        motivation:
+          "Multi-year statewide partnership with Playlab supporting educator AI capacity across districts.",
+      },
+      {
+        name: "KIPP North Carolina",
+        students: "~3,500",
+        community:
+          "Statewide charter network with schools in Charlotte, Durham, and Gaston County.",
+        motivation:
+          "Uses Leading Educators' Open Up IM Lessons math internalization apps on Playlab to support teacher planning and curriculum internalization.",
+      },
+    ],
+  },
 ];

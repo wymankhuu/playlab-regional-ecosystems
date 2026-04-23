@@ -15,7 +15,7 @@ const fullStates = regions
   .filter((r) => r.status === "full")
   .map((r) => r.id.toUpperCase());
 
-const emergingStates = ["NY", "DC", "MD", "VA"];
+const emergingStates = ["NY", "DC", "MD", "VA", "NC"];
 
 const stateRegionMap: StateRegionMap = (() => {
   const map: StateRegionMap = {};
@@ -61,7 +61,7 @@ export function LaunchedEcosystems() {
               emergingStates={emergingStates}
               regions={stateRegionMap}
               title="Regions where Playlab ecosystems are live"
-              description="Tennessee, Idaho, Indiana, and Texas are shaded as full ecosystems. New York, DC, Maryland, and Virginia are shaded as emerging ecosystems. Hover over a shaded state to see its region card."
+              description="Tennessee, Idaho, Indiana, and Texas are shaded as full ecosystems. New York, North Carolina, DC, Maryland, and Virginia are shaded as emerging ecosystems. Hover over a shaded state to see its region card."
             />
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-playlab-blue">

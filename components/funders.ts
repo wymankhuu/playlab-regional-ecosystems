@@ -69,6 +69,13 @@ export const FUNDERS: Record<string, Funder> = {
     alt: "Educate Texas logo",
     url: "https://edtx.org",
   },
+  "leon-levine-foundation": {
+    key: "leon-levine-foundation",
+    name: "The Leon Levine Foundation",
+    logo: "/funders/leon-levine-foundation.png",
+    alt: "The Leon Levine Foundation logo",
+    url: "https://www.leonlevinefoundation.org",
+  },
 };
 
 export function getFunder(key: string): Funder | undefined {

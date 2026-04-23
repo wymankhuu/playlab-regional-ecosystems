@@ -29,7 +29,7 @@ const segments: Segment[] = [
   },
   {
     label: "Urban districts & charter networks",
-    count: 34,
+    count: 35,
     percent: 58,
     swatch: "bg-cyan",
     dashArray: "58 42",
@@ -38,7 +38,7 @@ const segments: Segment[] = [
   },
 ];
 
-const TOTAL = 59;
+const TOTAL = 60;
 
 export function CompositionDonut() {
   return (
