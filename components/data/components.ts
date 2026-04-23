@@ -186,9 +186,9 @@ export const components: Component[] = [
     title: "Full Ecosystem with Local Nonprofit Enablement",
     investment: "$750K+",
     keyOutcome:
-      "Funds a local Playlab Learning Engineer plus a non-profit partner leading coordination. Long-term local ownership and sustainability across all ecosystem components.",
+      "Funds a local Playlab Learning Partner and Learning Engineer plus a non-profit partner leading coordination. Long-term local ownership and sustainability across all ecosystem components.",
     whatItLooksLike: [
-      "A full-time Playlab Learning Engineer embedded in the region to lead implementation, convene partners, and support schools and districts across all ecosystem components.",
+      "A full-time Playlab Learning Partner and Learning Engineer embedded in the region to lead implementation, convene partners, and support schools and districts across all ecosystem components.",
       "A local nonprofit partner leads coordination, community building, and long-term regional ownership.",
       "Hosts convenings and an ongoing community of practice across the ecosystem.",
       "Connects schools, districts, funders, and partners into a coherent regional network.",
