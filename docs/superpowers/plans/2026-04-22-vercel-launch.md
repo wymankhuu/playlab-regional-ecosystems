@@ -4,7 +4,9 @@
 
 **Goal:** Ship the `playlab-regional-ecosystems` Next.js 16 marketing site to production on Vercel via a GitHub-connected project, with OG image, Twitter card, `metadataBase`, and Vercel Analytics/Speed Insights in place.
 
-**Architecture:** Vercel auto-detected Next.js preset (no `vercel.json`), GitHub repo at `playlab-ai/playlab-regional-ecosystems` (public), Vercel project under the Playlab team. Production URL is a `.vercel.app` for now; `NEXT_PUBLIC_SITE_URL` env var drives `metadataBase` so a custom domain can be swapped in later without code changes.
+**Architecture:** Vercel auto-detected Next.js preset (no `vercel.json`), GitHub repo at `wymankhuu/playlab-regional-ecosystems` (public, personal account), Vercel project under the personal `wyman-8003's projects` team. Production URL is a `.vercel.app` for now; `NEXT_PUBLIC_SITE_URL` env var drives `metadataBase` so a custom domain can be swapped in later without code changes.
+
+**Destination update (2026-04-22):** Per user decision during execution, the repo and Vercel project are being created under Wyman's personal accounts (not `playlab-education` org / `Playlab` Vercel team as originally specced). Once the site stabilizes, it can be transferred to the org later. This supersedes the spec's decisions #2 and #3.
 
 **Tech Stack:** Next.js 16.2.4 (App Router, Turbopack), React 19.2.4, TypeScript, Tailwind v4, `next/og` `ImageResponse`, `@vercel/analytics`, `@vercel/speed-insights`, GitHub CLI (`gh`), Vercel CLI (`vercel`).
 
@@ -49,20 +51,18 @@ Expected: Node 20+ and npm 10+ (any recent LTS is fine; Next 16 requires Node 20
 Run: `gh --version && gh auth status`
 Expected: `gh` prints its version and shows "Logged in to github.com as <user>". If not authenticated, run `gh auth login` before proceeding.
 
-- [ ] **Step 3: Verify Playlab org membership**
+- [ ] **Step 3: (Superseded) GitHub destination is personal account**
 
-Run: `gh api user/orgs --jq '.[].login'`
-Expected: Output includes `playlab-ai` (or the exact org slug for Playlab). If the org is missing, stop and request membership before continuing, since `gh repo create playlab-ai/...` will fail without it.
+The repo now lives at `wymankhuu/playlab-regional-ecosystems` (personal, public), so no org membership check is required for Task 10. Kept as a numbered step for plan alignment; no action needed.
 
 - [ ] **Step 4: Verify `vercel` CLI is installed and authenticated**
 
 Run: `vercel --version && vercel whoami`
 Expected: Version prints and `whoami` returns your Vercel username. If not installed: `npm i -g vercel`. If not authenticated: `vercel login`.
 
-- [ ] **Step 5: Verify Playlab Vercel team is accessible**
+- [ ] **Step 5: (Superseded) Vercel scope is personal team**
 
-Run: `vercel teams ls`
-Expected: Output lists the Playlab team slug. Note the exact slug; it's needed in Task 12. If not visible, stop and request team access before continuing.
+The Vercel project will be created under `wyman-8003's projects` (slug: `wyman-8003s-projects`). `vercel teams ls` was run during Phase 1 execution and confirmed the slug. No further action needed.
 
 ---
 
@@ -505,28 +505,28 @@ Expected: Working tree clean. History is a clean linear progression: initial com
 
 **Files:** (none)
 
-- [ ] **Step 1: Confirm you're authed to the right GitHub user**
+- [ ] **Step 1: Confirm you're authed as `wymankhuu`**
 
 Run: `gh auth status`
-Expected: Shows the GitHub account that has write access to the `playlab-ai` org.
+Expected: Shows `Logged in to github.com account wymankhuu`.
 
 - [ ] **Step 2: Create the public repo and push `main`**
 
 Run:
 ```bash
-gh repo create playlab-ai/playlab-regional-ecosystems \
+gh repo create wymankhuu/playlab-regional-ecosystems \
   --public \
   --source=. \
   --remote=origin \
   --push \
   --description "Marketing site for Playlab's Regional AI Innovation Ecosystems funder partnership."
 ```
-Expected: Repo is created under `playlab-ai`, `origin` remote is added locally, and `main` is pushed. Output includes the repo URL.
+Expected: Repo is created under `wymankhuu`, `origin` remote is added locally, and `main` is pushed. Output includes the repo URL.
 
 - [ ] **Step 3: Verify the push**
 
 Run: `git remote -v && git branch -vv`
-Expected: `origin` points at `https://github.com/playlab-ai/playlab-regional-ecosystems.git` (or `git@github.com:...`). `main` tracks `origin/main`.
+Expected: `origin` points at `https://github.com/wymankhuu/playlab-regional-ecosystems.git` (or `git@github.com:...`). `main` tracks `origin/main`.
 
 - [ ] **Step 4: Load the repo in the browser as a sanity check**
 
@@ -535,7 +535,7 @@ Expected: GitHub page opens showing the code, README, and the `docs/superpowers/
 
 ---
 
-### Task 11: Link Vercel project under the Playlab team
+### Task 11: Link Vercel project under your personal team
 
 **Files:** (none; this creates `.vercel/` locally, which is already gitignored by default in `.gitignore`)
 
@@ -550,22 +550,21 @@ git commit -m "chore: ignore .vercel project directory"
 git push
 ```
 
-- [ ] **Step 2: Run `vercel link` scoped to the Playlab team**
+- [ ] **Step 2: Run `vercel link` scoped to the personal team**
 
 Run:
 ```bash
 vercel link --yes \
-  --scope <playlab-team-slug> \
+  --scope wyman-8003s-projects \
   --project playlab-regional-ecosystems
 ```
-Substitute `<playlab-team-slug>` with the exact slug from Task 1, Step 5.
 
 Expected: Prompts answered non-interactively via `--yes`. A `.vercel/project.json` file is created locally. If the project doesn't exist yet on Vercel, `vercel link` creates it.
 
 - [ ] **Step 3: Verify the linkage**
 
 Run: `cat .vercel/project.json`
-Expected: JSON contains `projectId` and `orgId`. `orgId` corresponds to the Playlab team.
+Expected: JSON contains `projectId` and `orgId`. `orgId` corresponds to the personal `wyman-8003s-projects` scope.
 
 ---
 
@@ -605,11 +604,11 @@ If any smoke test fails, debug on the preview before connecting GitHub or promot
 - [ ] **Step 1: Connect the GitHub repo to the Vercel project**
 
 Run: `vercel git connect`
-Expected: The CLI detects the `origin` remote and links `playlab-ai/playlab-regional-ecosystems` to the Vercel project. Going forward, pushes to `main` trigger production deploys and pushes to any other branch trigger preview deploys.
+Expected: The CLI detects the `origin` remote and links `wymankhuu/playlab-regional-ecosystems` to the Vercel project. Going forward, pushes to `main` trigger production deploys and pushes to any other branch trigger preview deploys.
 
 - [ ] **Step 2: Verify in the Vercel dashboard**
 
-Run: `vercel project inspect playlab-regional-ecosystems --scope <playlab-team-slug>`
+Run: `vercel project inspect playlab-regional-ecosystems --scope wyman-8003s-projects`
 Expected: Output shows the Git repository as connected.
 
 ---
@@ -707,7 +706,7 @@ Expected: The current production deploy is labeled "Production", with earlier de
 
 At this point:
 - `playlab-regional-ecosystems` is live on a Vercel `.vercel.app` URL.
-- GitHub repo `playlab-ai/playlab-regional-ecosystems` is connected: pushes to `main` auto-deploy to production, branch pushes auto-deploy to preview.
+- GitHub repo `wymankhuu/playlab-regional-ecosystems` is connected: pushes to `main` auto-deploy to production, branch pushes auto-deploy to preview.
 - OG image and Twitter card preview correctly in social/link unfurlers.
 - Vercel Analytics and Speed Insights are active.
 - Instant Rollback is available if anything regresses.
