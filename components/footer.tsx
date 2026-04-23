@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="bg-playlab-blue text-cream">
       <div className="mx-auto w-full max-w-7xl px-4 pt-12 pb-10 sm:px-8 lg:px-12">
         <ColorBar />
-        <div className="mt-8 flex flex-col gap-3">
+        <div className="mt-8 flex flex-col items-start gap-3">
           <Image
             src="/playlab-logo.png"
             alt="Playlab"
