@@ -1,0 +1,34 @@
+const PARTNERSHIP_REQUEST_URL =
+  "https://u694o.share.hsforms.com/2WT-4aa2lTtW5aSd12wymYg";
+const CONTACT_EMAIL = "partnerships@playlab.ai";
+
+export function CTABar() {
+  return (
+    <section className="bg-sage pb-16">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-12">
+        <div className="flex flex-col flex-wrap items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+          <a
+            href={`mailto:${CONTACT_EMAIL}?subject=Regional%20AI%20Innovation%20Ecosystem%20Partnership`}
+            className="inline-flex items-center justify-center rounded-full border border-dark-green bg-yellow px-8 py-3 font-sans text-base font-semibold text-dark-green transition-opacity hover:opacity-90"
+          >
+            Start a conversation
+          </a>
+          <a
+            href={PARTNERSHIP_REQUEST_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full border border-dark-green bg-cream px-8 py-3 font-sans text-base font-semibold text-dark-green transition-opacity hover:opacity-90"
+          >
+            Submit a partnership request
+          </a>
+          <a
+            href="#components"
+            className="inline-flex items-center justify-center rounded-full border border-dark-green bg-transparent px-8 py-3 font-sans text-base font-semibold text-dark-green transition-colors hover:bg-dark-green hover:text-cream"
+          >
+            Explore the components
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
