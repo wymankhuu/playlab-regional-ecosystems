@@ -205,7 +205,7 @@ const components: Component[] = [
       "Ecosystem embedded in the region's education infrastructure, not dependent on a single external partner.",
     ],
     example: {
-      name: "Google.org Ecosystem Model in IN, TN, and ID; Central Texas; DC/MD/VA",
+      name: "Google.org Ecosystem Model in IN, TN, and ID, Central Texas, DC/MD/VA",
       body: "In each region, a local nonprofit convenes districts and educators across the state, with Playlab providing a dedicated regional lead. The partnership sustains participation and momentum across initiatives and ensures the ecosystem is rooted in community priorities. Central Texas and DC/MD/VA ecosystems each launched with a local intermediary and Playlab support, engaging 50+ school systems and demonstrating measurable growth in district AI capacity.",
       image: {
         src: "/components/06-regional-ecosystem.jpg",
