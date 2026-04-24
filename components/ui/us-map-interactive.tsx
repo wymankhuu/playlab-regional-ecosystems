@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef, useState } from "react";
 
 import type { Funder } from "@/components/funders";
@@ -105,11 +106,12 @@ export function UsMapInteractive({ svg, regions, title }: Props) {
               </p>
               <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1.5">
                 {activeRegion.funders.map((f) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
+                  <Image
                     key={f.key}
                     src={f.logo}
                     alt={f.alt}
+                    width={f.width}
+                    height={f.height}
                     className="h-5 w-auto object-contain"
                   />
                 ))}

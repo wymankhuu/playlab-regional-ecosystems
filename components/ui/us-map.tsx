@@ -63,7 +63,7 @@ ${allInteractiveHover ? `${allInteractiveHover} { filter: brightness(1.1); }` : 
     .replace(/<\/style>/, `\n${injectedCss}\n</style>`)
     .replace(
       /<svg([^>]*)width="\d+"([^>]*)height="\d+"([^>]*)>/,
-      '<svg$1$2$3 viewBox="0 0 959 593" preserveAspectRatio="xMidYMid meet" width="100%" height="auto">',
+      '<svg$1$2$3 viewBox="0 0 959 593" preserveAspectRatio="xMidYMid meet" width="100%">',
     );
 }
 

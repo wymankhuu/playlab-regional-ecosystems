@@ -15,10 +15,7 @@ export function RegionCard({ region }: { region: Region }) {
       id={`region-${region.id}`}
       className="group scroll-mt-24 rounded-2xl border border-dark-green/10 bg-cream open:border-dark-green/20 open:md:col-span-2 open:lg:col-span-3"
     >
-      <summary
-        aria-label={`Toggle details for ${region.name}`}
-        className="flex cursor-pointer list-none items-start justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden"
-      >
+      <summary className="flex cursor-pointer list-none items-start justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden">
         <div className="flex flex-col gap-2">
           <StatusPill status={region.status} />
           <h4 className="font-heading text-xl font-bold leading-tight text-dark-green sm:text-2xl">
@@ -76,13 +73,14 @@ export function RegionCard({ region }: { region: Region }) {
                     <a
                       href={org.url}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="text-playlab-blue underline-offset-2 hover:text-link hover:underline"
                     >
                       {org.name}
                       <span aria-hidden className="ml-1">
                         ↗
                       </span>
+                      <span className="sr-only"> (opens in new tab)</span>
                     </a>
                   ) : (
                     <span>{org.name}</span>
@@ -158,7 +156,7 @@ export function RegionCard({ region }: { region: Region }) {
           <a
             href={`/regions/${region.id}/onepager`}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 font-sans text-sm font-semibold text-link underline-offset-2 hover:text-link-dark hover:underline"
           >
             <svg
@@ -183,8 +181,9 @@ export function RegionCard({ region }: { region: Region }) {
               />
             </svg>
             View one-pager
+            <span className="sr-only"> (opens in new tab)</span>
           </a>
-          <span className="font-sans text-xs text-playlab-blue/60">
+          <span className="font-sans text-xs text-playlab-blue/80">
             Print to PDF to share
           </span>
         </div>

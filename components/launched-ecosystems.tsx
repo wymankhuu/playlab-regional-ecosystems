@@ -54,6 +54,12 @@ export function LaunchedEcosystems() {
         <CompositionDonut />
       </div>
       <div className="mt-6">
+        <a
+          href="#regions-grid"
+          className="sr-only focus:not-sr-only focus:mb-4 focus:inline-flex focus:items-center focus:rounded-full focus:bg-playlab-blue focus:px-4 focus:py-2 focus:font-sans focus:text-sm focus:font-semibold focus:text-cream focus:outline-2 focus:outline-offset-2 focus:outline-playlab-blue"
+        >
+          Skip map and view the region cards
+        </a>
         <div className="overflow-hidden rounded-3xl bg-playlab-blue/5 p-4 sm:p-8 lg:p-10">
           <div className="mx-auto max-w-4xl">
             <UsMap
@@ -82,7 +88,10 @@ export function LaunchedEcosystems() {
           educators, and students.
         </p>
 
-        <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          id="regions-grid"
+          className="mt-6 grid scroll-mt-24 grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+        >
           {regions.map((region) => (
             <RegionCard key={region.id} region={region} />
           ))}

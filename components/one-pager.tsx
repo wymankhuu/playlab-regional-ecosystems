@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { contactMailto, PARTNERSHIP_REQUEST_URL } from "@/components/cta";
 import type { Region } from "@/components/data/regions";
 import { FUNDERS, type Funder } from "@/components/funders";
@@ -87,10 +88,11 @@ export function OnePager({ region }: { region: Region }) {
           </p>
         </div>
         <div className="flex shrink-0 flex-col items-end gap-3">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/playlab-logo.png"
             alt="Playlab"
+            width={167}
+            height={57}
             className="h-8 w-auto"
           />
           {funders.length > 0 && (
@@ -221,7 +223,7 @@ export function OnePager({ region }: { region: Region }) {
             >
               <div className="flex items-baseline justify-between gap-2">
                 <p className="font-sans text-[11px] font-bold text-dark-green">
-                  <span className="text-dark-green/60">{c.number}</span>{" "}
+                  <span className="text-dark-green/80">{c.number}</span>{" "}
                   {c.title}
                 </p>
                 <span className="shrink-0 font-sans text-[10px] font-semibold text-playlab-blue/70">
@@ -244,20 +246,21 @@ export function OnePager({ region }: { region: Region }) {
           Reach out to explore how Playlab&apos;s regional ecosystem components
           might fit your goals.
         </p>
-        <div className="mt-3 flex flex-wrap gap-3">
+        <div className="mt-3 flex flex-wrap items-center gap-3">
           <a
             href={contactMailto(region.name)}
             className="inline-flex items-center rounded-full bg-dark-green px-4 py-1.5 font-sans text-[12px] font-semibold text-cream"
           >
-            Contact Playlab
+            Start a conversation
           </a>
           <a
             href={PARTNERSHIP_REQUEST_URL}
             target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center rounded-full border border-dark-green bg-cream px-4 py-1.5 font-sans text-[12px] font-semibold text-dark-green"
+            rel="noopener noreferrer"
+            className="font-sans text-[11px] font-semibold text-link-dark underline-offset-2 hover:underline"
           >
             Submit a partnership request
+            <span className="sr-only"> (opens in new tab)</span>
           </a>
         </div>
       </section>

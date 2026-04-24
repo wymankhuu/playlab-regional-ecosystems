@@ -4,7 +4,7 @@ import { LaunchedEcosystems } from "./launched-ecosystems";
 
 const capacities = [
   {
-    label: "AI knowledge",
+    label: "AI literacy",
     body: "Understanding how AI works, its capabilities, limitations, and societal impact.",
   },
   {

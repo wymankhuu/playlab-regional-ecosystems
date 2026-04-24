@@ -17,7 +17,7 @@ export function Footer() {
           <p className="max-w-xs text-sm text-cream/80">
             Brought to you by Playlab Education Inc., a 501(c)3 nonprofit.
           </p>
-          <p className="text-sm text-cream/60">
+          <p className="text-sm text-cream/80">
             © {new Date().getFullYear()} Playlab Education Inc.
           </p>
         </div>

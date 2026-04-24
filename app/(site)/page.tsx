@@ -12,15 +12,17 @@ import { WhyPlaylab } from "@/components/why-playlab";
 export default function Page() {
   return (
     <>
-      <Hero />
-      <CTABar />
-      <Opportunity />
-      <WhatIsEcosystem />
-      <ComponentsGrid />
-      <AppCollectionCallout />
-      <BuildingYourEcosystem />
-      <WhyPlaylab />
-      <FinalCTA />
+      <main>
+        <Hero />
+        <CTABar />
+        <Opportunity />
+        <WhatIsEcosystem />
+        <ComponentsGrid />
+        <AppCollectionCallout />
+        <BuildingYourEcosystem />
+        <WhyPlaylab />
+        <FinalCTA />
+      </main>
       <Footer />
     </>
   );
